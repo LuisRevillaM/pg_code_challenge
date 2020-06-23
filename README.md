@@ -1,5 +1,4 @@
-## Pg Code Challenge
-### Luis Revilla
+## Pg Code Challenge - Luis Revilla
 
 This program has been implemented in JavaScript. Node.js is required to run it.
 
