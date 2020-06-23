@@ -1,6 +1,6 @@
 ## Pg Code Challenge - Luis Revilla
 
-This program has been implemented in JavaScript. Node.js is required to run it.
+This program has been implemented in JavaScript. `Node.js` is required to run it.
 
 The core functionality has no external dependencies, but the NPM library `Mocha` has been added for testing purposes.
 
