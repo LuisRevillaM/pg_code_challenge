@@ -15,18 +15,18 @@ function calculateCost({ age, name, gender, healthCondition }) {
   }, BASE_COST);
 
   return [name, `$${finalPrice.toFixed(2)}`];
-};
+}
 
 function getAgeIncreaseFn(age) {
   const freq = 5;
   const increase = 20;
-  
-  return (price) => {
-    const multiple = Math.floor((age - 18)/freq);
 
-    return price + (multiple * increase);
+  return (price) => {
+    const multiple = Math.floor((age - 18) / freq);
+
+    return price + multiple * increase;
   };
-};
+}
 
 function getConditionIncreaseFn(condition) {
   const conditionToCostPercentageMap = {
@@ -36,32 +36,32 @@ function getConditionIncreaseFn(condition) {
   };
 
   return (price) => {
-    const increase = price * conditionToCostPercentageMap[condition]/100;
+    const increase = (price * conditionToCostPercentageMap[condition]) / 100;
     return increase + price;
-  }
-};
+  };
+}
 
 function getGenderDiscountFn(gender) {
   return (price) => {
-    if (gender === 'female') {
+    if (gender === "female") {
       return price - 12;
-    };
+    }
 
     return price;
   };
-};
+}
 
 function getCostForManyCustomers(customers) {
-  return customers.reduce((ar,c) => {
+  return customers.reduce((ar, c) => {
     const cost = calculateCost(c);
     if (cost) {
       ar.push(cost);
     }
     return ar;
   }, []);
-};
+}
 
 module.exports = {
- getCostForManyCustomers,
- calculateCost
+  getCostForManyCustomers,
+  calculateCost,
 };
