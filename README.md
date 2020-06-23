@@ -26,7 +26,7 @@ node index.js
 
 ## Input and Output
 
-We've chosen `csv` files as the input format.
+We've chosen `csv` files as the input format for this initial version.
 
 ```
 node index.js <filePath> 
