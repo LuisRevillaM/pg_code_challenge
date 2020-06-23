@@ -18,7 +18,7 @@ npm run test
 
 ## Running the program
 
-We're using `Node.js` to run the program, with the following command:
+We're using `Node.js` to run the program, with the following command from the project's root folder:
 
 ```
 node index.js
