@@ -16,15 +16,15 @@ Tests have been included in the `test.js` file. These can be run with the follow
 npm run test
 ```
 
-### Running the program
+## Running the program
 
-We're using `node` to run the program, with the following command:
+We're using `Node.js` to run the program, with the following command:
 
 ```
 node index.js
 ```
 
-### Input and Output
+## Input and Output
 
 We've chosen `csv` files as the input format.
 
@@ -43,13 +43,15 @@ The expected CSV file has one customer per line, with their data ordered in the 
 
 The program's output will be 'printed' in the terminal.
 
-### Implementation Strategy
+## Implementation Strategy
 
 Our main function, `calculateCost`, reduces an array of policies for cost increases or discounts into the resulting, final cost. 
 
 Each policy is defined as a higher order function that takes its concerning data (age, gender, etc) and returns a function that only expects a base or partial cost and returns the modified cost.
 
-This approach allows us to easily remove or add aditional policies in the future. Having the policies as standalone functions also enables us to modify their details in an isolated manner.
+This approach allows us to easily remove or add aditional policies in the future; or even change the order in which they are applied. 
+
+Furthermore, having the policies as isolated functions also enables us to modify their implementation details without affecting the rest of the program/policies.
 
 ```javascript
   const costChangingPolicies = [
